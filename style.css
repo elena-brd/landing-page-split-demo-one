@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #292929;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    font-size: 6rem;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    top: 55%;
+    left: 44%;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+}
+
+.btn-right {
+    color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    padding: 0.7rem 0.9rem;
+}
+
+.btn-right:hover {
+    background: #fff;
+    color: #1e1e1e;
+    border: 2px solid #fff;
+}
+
+.btn-left {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.7rem 0.9rem;
+}
+
+.btn-left:hover {
+    background: #1e1e1e;
+    color: #fff;
+    border: 2px solid #1e1e1e;
+}
+
+
+.left-title {
+    color: #fff;
+}
+
+.right-title {
+    color: #1e1e1e;
+}
+
+.split.left {
+    left: 0;
+    background: url('./images/paris.jpg') center center no-repeat;
+    background-size: cover
+}
+
+.split.left::before {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
+.split.right::before {
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 0255, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
+.split.right {
+    right: 0;
+    background: url('./images/rome.jpg') center center no-repeat;
+    background-size: cover
+}
+
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+    transition: all 0.4s ease-out;
+    cursor: pointer;
+}
+
+/* hover effect */
+.hover-left .left {
+    width: 70%;
+}
+
+.hover-left .right {
+    width: 30%;
+}
+
+.hover-right .right {
+    width: 70%;
+}
+
+.hover-right .left {
+    width: 30%;
+}
